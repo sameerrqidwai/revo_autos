@@ -36,13 +36,13 @@ const Navbar = () => {
       left: 0,
       width: '100%',
       zIndex: 100,
-      padding: '20px 0',
+      padding: '10px 0',
       background: 'transparent'
     }}>
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2" style={{ cursor: 'pointer' }}>
-          <img src={logoIcon} alt="REVO Autogroup" style={{ height: '100px', width: 'auto' }} />
+          <img src={logoIcon} alt="REVO Autogroup" style={{ height: '140px', width: 'auto' }} />
         </div>
 
         {/* Links */}
@@ -79,7 +79,7 @@ const Hero = () => {
       color: '#fff',
       minHeight: '100vh',
       position: 'relative',
-      paddingTop: 'var(--header-height)',
+      paddingTop: '40px',
       display: 'flex',
       alignItems: 'center',
       overflow: 'hidden'
@@ -124,8 +124,8 @@ const Hero = () => {
         zIndex: 1
       }}></div>
 
-      <div className="container" style={{ position: 'relative', zIndex: 3, width: '100%' }}>
-        <div style={{ maxWidth: '650px' }}>
+      <div className="container" style={{ position: 'relative', zIndex: 3, width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ maxWidth: '650px', textAlign: 'center' }}>
           <h1 style={{ fontSize: '4.5rem', lineHeight: '1.1', marginBottom: '1.5rem', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
             Your Car Journey <br /> Starts Here
           </h1>
@@ -133,7 +133,9 @@ const Hero = () => {
             fontSize: '1.125rem',
             color: 'rgba(255, 255, 255, 0.9)',
             marginBottom: '2.5rem',
-            maxWidth: '500px',
+            maxWidth: '600px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
             lineHeight: '1.6',
             textShadow: '0 1px 4px rgba(0,0,0,0.5)'
           }}>
@@ -141,7 +143,7 @@ const Hero = () => {
             we handle it all so you can drive stress-free
           </p>
 
-          <div className="flex gap-4 items-center mb-12">
+          <div className="flex gap-4 items-center justify-center mb-12">
             <button className="btn btn-primary flex gap-2">
               Find Your Car <FaArrowRight size={14} />
             </button>
@@ -151,8 +153,8 @@ const Hero = () => {
           </div>
 
           {/* Social Proof */}
-          <div className="flex items-center gap-4">
-            <div className="flex" style={{ marginLeft: '15px' }}>
+          <div className="flex items-center justify-center gap-4">
+            <div className="flex">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} style={{
                   width: '40px',
@@ -160,15 +162,15 @@ const Hero = () => {
                   borderRadius: '50%',
                   background: `#333`,
                   border: '2px solid #000',
-                  marginLeft: '-15px'
+                  marginLeft: i === 1 ? '0' : '-15px'
                 }}></div>
               ))}
             </div>
             <div>
-              <div className="flex gap-1 text-red mb-1">
+              <div className="flex gap-1 text-red mb-1 justify-center">
                 {[1, 2, 3, 4, 5].map(i => <FaStar key={i} size={14} />)}
               </div>
-              <p style={{ fontSize: '0.9rem', color: '#fff', fontWeight: '500' }}>
+              <p style={{ fontSize: '0.9rem', color: '#fff', fontWeight: '500', textAlign: 'center' }}>
                 4.9/5 <span style={{ color: '#ccc' }}>(9.5k Reviews)</span>
               </p>
             </div>
